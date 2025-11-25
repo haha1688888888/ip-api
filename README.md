@@ -77,6 +77,11 @@ npm run deploy:vercel
 npm run deploy:netlify
 ```
 
+📚 **部署文档**:
+- 🚀 [快速开始](./QUICKSTART.md) - 最快部署方式
+- 📖 [完整部署指南](./DEPLOYMENT.md) - 详细步骤和配置说明
+- 📊 [部署总结](./DEPLOYMENT-SUMMARY.md) - 项目状态和资源
+
 ### 2. 绑定域名
 
 按照 Cloudflare/Vercel/Netlify 文档绑定域名即可。
