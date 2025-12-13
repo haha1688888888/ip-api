@@ -1,14 +1,14 @@
-const EMOJI_FLAG_UNICODE_STARTING_POSITION = 127397
-export function getFlag(countryCode) {
-  const regex = new RegExp('^[A-Z]{2}$').test(countryCode)
-  if (!countryCode || !regex) return void 0
-  try {
-    return String.fromCodePoint(
-      ...countryCode
-        .split('')
-        .map((char) => EMOJI_FLAG_UNICODE_STARTING_POSITION + char.charCodeAt(0))
-    )
-  } catch (error) {
-    return void 0
+// Utility functions for login keepalive worker
+
+export function parseFormData(urlEncodedString) {
+  const params = new URLSearchParams(urlEncodedString)
+  const data = {}
+  for (const [key, value] of params) {
+    data[key] = value
   }
+  return data
+}
+
+export function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
