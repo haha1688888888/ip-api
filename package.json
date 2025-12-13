@@ -1,7 +1,7 @@
 {
-  "name": "ip-api",
-  "version": "1.0.0",
-  "description": "",
+  "name": "universal-login-keepalive",
+  "version": "2.0.0",
+  "description": "Universal login keepalive system for Cloudflare Workers",
   "main": "src/index.js",
   "scripts": {
     "dev:cloudflare": "wrangler dev",

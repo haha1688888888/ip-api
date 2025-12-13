@@ -1,3 +1,25 @@
-name = "ip-api"
+name = "universal-login-keepalive"
 main = "src/index.js"
 compatibility_date = "2023-11-24"
+
+[[env.production.kv_namespaces]]
+binding = "LOGIN_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+preview_id = "YOUR_PREVIEW_ID"
+
+[[triggers.scheduled]]
+crons = ["0 */6 * * *"]
+
+[env.production.vars]
+LOGIN_URL = ""
+USERNAME = ""
+PASSWORD = ""
+SUCCESS_INDICATOR = "logged in"
+USERNAME_FIELD = "username"
+PASSWORD_FIELD = "password"
+CSRF_FIELD = "csrf_token"
+NOTIFYX_TOKEN = ""
+NOTIFYX_ENDPOINT = ""
+WEBHOOK_URL = ""
+MAX_RETRIES = "3"
+TIMEOUT_MS = "30000"
